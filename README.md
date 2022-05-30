@@ -33,3 +33,7 @@ get_human_age(27, 27) == [2, 2]
 get_human_age(28, 28) == [3, 2]
 get_human_age(100, 100) == [21, 17]
 ```
+
+Run `pytest app/` to check if function pass your tests.
+Run `pytest tests/` to check if your tests cover all boundary conditions
+and pass task tests.
