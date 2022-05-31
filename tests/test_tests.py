@@ -21,7 +21,9 @@ def test_zero_ages(monkeypatch):
     monkeypatch.setattr(main, "get_human_age", mock_zero_ages)
 
     test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1
+    assert test_result.value == 1, (
+        "15 cat/dog years should convert into 1 human age."
+    )
 
 
 def test_first_ages(monkeypatch):
@@ -34,7 +36,9 @@ def test_first_ages(monkeypatch):
     monkeypatch.setattr(main, "get_human_age", mock_first_ages)
 
     test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1
+    assert test_result.value == 1, (
+        "24 cat/dog years should convert into 2 human ages."
+    )
 
 
 def test_second_ages(monkeypatch):
@@ -47,4 +51,6 @@ def test_second_ages(monkeypatch):
     monkeypatch.setattr(main, "get_human_age", mock_second_ages)
 
     test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1
+    assert test_result.value == 1, (
+        "28 cat years and 29 dog years should convert into 3 human ages."
+    )
