@@ -2,9 +2,9 @@
 
 - Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before start
 
-Write tests for `get_human_age` function that takes two integers `cat_age` 
-(my cat's age in cat years) and `dog_age` (my dog's age in dog years) 
-and returns an array where:
+Inside `app/test_main.py`, write tests for `get_human_age` function that 
+takes two integers `cat_age` (my cat's age in cat years) and `dog_age` 
+(my dog's age in dog years) and returns an array where:
 
 the first element is my cat's age in human years
 the second element is my dog's age in human years
@@ -33,3 +33,7 @@ get_human_age(27, 27) == [2, 2]
 get_human_age(28, 28) == [3, 2]
 get_human_age(100, 100) == [21, 17]
 ```
+
+Run `pytest app/` to check if function pass your tests.
+Run `pytest tests/` to check if your tests cover all boundary conditions
+and pass task tests.
