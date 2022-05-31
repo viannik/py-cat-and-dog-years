@@ -45,6 +45,6 @@ def test_second_ages(monkeypatch):
         return [cat_to_human, dog_to_human]
 
     monkeypatch.setattr(main, "get_human_age", mock_second_ages)
-    print()
+
     test_result = pytest.main(["app/test_main.py"])
     assert test_result.value == 1
