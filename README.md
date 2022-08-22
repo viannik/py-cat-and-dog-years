@@ -1,26 +1,29 @@
 # Cat and Dog years
 
-- Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before start
+Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before start.
 
 Inside `app/test_main.py`, write tests for `get_human_age` function that 
 takes two integers `cat_age` (my cat's age in cat years) and `dog_age` 
 (my dog's age in dog years) and returns an array where:
 
-the first element is my cat's age in human years
-the second element is my dog's age in human years
-As usually age is a whole number of years (discard the remainder)
+- the first element is my cat's age in human years;
+- the second element is my dog's age in human years.
+
+As usually age is a whole number of years (discard the remainder).
 
 Cat years are converted to human years following the next rules:
 
-- First 15 cat years give 1 human year
-- the next 9 cat years give 1 more human year
-- every 4 next cat years give 1 extra human year
-- 
+- first 15 cat years give 1 human year;
+- the next 9 cat years give 1 more human year;
+- every 4 next cat years give 1 extra human year.
+
 Dog years:
 
-- First 15 dog years give 1 human year
-- the next 9 dog years give 1 more human year
-- every 5 next dog years give 1 extra human year
+- first 15 dog years give 1 human year;
+- the next 9 dog years give 1 more human year;
+- every 5 next dog years give 1 extra human year.
+
+**Please note:** you have to use `pytest` for writing tests.
 
 Examples:
 ```python
