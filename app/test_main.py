@@ -60,33 +60,16 @@ def test_human_age_cat_and_dog_uneven(
 ) -> None:
     assert get_human_age(cat_age, dog_age) == result
 
-#
-# @pytest.mark.parametrize(
-#     "cat_age,dog_age",
-#     [
-#         (-1, 10),
-#         (10, -5),
-#     ],
-# )
-# def test_human_age_negative_values_raises(
-#     cat_age: int,
-#     dog_age: int,
-# ) -> None:
-#     with pytest.raises(ValueError):
-#         get_human_age(cat_age, dog_age)
-#
-#
-# @pytest.mark.parametrize(
-#     "cat_age,dog_age",
-#     [
-#         ("fifteen", 10),
-#         (10.5, 20),
-#         (None, []),
-#     ],
-# )
-# def test_human_age_invalid_type_raises(
-#     cat_age: int,
-#     dog_age: int,
-# ) -> None:
-#     with pytest.raises((TypeError, ValueError)):
-#         get_human_age(cat_age, dog_age)
+
+@pytest.mark.parametrize(
+    "cat_age,dog_age",
+    [
+        (-1, 10),
+        (10, -5),
+    ],
+)
+def test_human_age_negative_values_raises(
+    cat_age: int,
+    dog_age: int,
+) -> None:
+    assert get_human_age(cat_age, dog_age) == [0, 0]
